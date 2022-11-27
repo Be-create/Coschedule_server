@@ -22,6 +22,7 @@ AuthRouter.post('/register', async (req, res) => {
     try {
          let user = await newUser.save();
         return res.status(200).send(user);
+        
     } catch (err) {
         return res.status(500).send(err);
     }
