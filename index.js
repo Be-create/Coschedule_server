@@ -19,7 +19,6 @@ app.use(express.json());
 
 app.get('/logout', (req, res) => {
     req.logout();
-    req.session.destroy();
     res.send('Goodbye!');
 });
 
@@ -44,5 +43,5 @@ app.use("/api/tasks", taskRouter);
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     database();
-    console.log(`Listening on port ${PORT}`);
+    console.log(`Listening on port http://localhost:${PORT}`);
 });
